@@ -18,6 +18,24 @@ export const login = createAsyncThunk(
   }
 );
 
-const loginSlice = createSlice({});
+const loginSlice = createSlice({
+  name: 'login',
+  initialState: { user: null, status: 'idle', error: null },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(login.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(login.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.user = action.payload;
+      })
+      .addCase(login.rejected, (state, action) => {
+        state.status = 'idle';
+        state.error = action.error.message;
+      });
+  },
+});
 
 export default loginSlice.reducer;
