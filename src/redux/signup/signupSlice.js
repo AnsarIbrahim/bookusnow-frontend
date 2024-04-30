@@ -18,6 +18,24 @@ export const signup = createAsyncThunk(
   }
 );
 
-const signupSlice = createSlice({});
+const signupSlice = createSlice({
+  name: 'signup',
+  initialState: { user: null, status: 'idle', error: null },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(signup.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(signup.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.user = action.payload;
+      })
+      .addCase(signup.rejected, (state, action) => {
+        state.status = 'idle';
+        state.error = action.error.message;
+      });
+  },
+});
 
 export default signupSlice.reducer;
