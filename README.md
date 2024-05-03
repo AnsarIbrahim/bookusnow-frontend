@@ -1,9 +1,7 @@
-# bookusnow-frontend
-
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1>Fix Mate</h1>
+  <h1>BookUsNow</h1>
 </div>
 
 # 📗 Table of Contents
@@ -13,6 +11,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [📹 Presentation Overview Video ](#-the-video-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -26,30 +26,37 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# [ 👨‍💻 Fix Mate ]<a name="about-project"></a>
+# 👨‍💻 BookUsNow <a name="about-project"></a>
 
-**Fix Mate** is committed to making everyday life more convenient by connecting users with trusted service providers. It is a one-stop platform for finding, booking, and reviewing services, all from the comfort of your home. Users can communicate with service providers through the app, discussing specific requirements, asking questions, and confirming details.
+**BookUsNow** is an innovative platform designed to revolutionize the way events are planned and executed. At its core, BookUsNow aims to simplify the process of organizing events by providing users with a comprehensive suite of tools to find, book, and interact with various service providers. Whether you're planning a small gathering or a large-scale event, BookUsNow is your go-to solution for making your event a success without the usual hassle.
 
-## Live Link
+<!-- LIVE DEMO -->
 
-> - [Live Link](https://fixmate.netlify.app/)
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://music-store-ansaribrahim.netlify.app/)
+
+<!-- The Video -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📹 Presentation Overview Video <a name="the-video"></a>
+
+- [Project Showcase]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Link to Back End
 
-> - [Base Url](https://fixmate.onrender.com/)
+> - [Base Url](https://bookusnow-db016831f8aa.herokuapp.com/)
 
 > - API Endpoints
 
-- api/v1/experts
-- api/v1/reservations
-- api/v1/specializations
-  > - [API Documentation](https://fixmate.onrender.com/api-docs/index.html)
+- api/v1/events/
+- api/v1/users/
+- api/v1/users/admins
 
-> - [Link to Back-end Repository](https://github.com/anita00001/fix-mate-backend)
-
-## Kanban Board Link
-
-> - [Link to Kanban Board](https://github.com/users/anita00001/projects/5)
+> - [Link to Back-end Repository](https://github.com/AnsarIbrahim/bookusnow-backend)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,19 +67,20 @@
   <ul>
     <li><a href="https://reactjs.org/">React</a></li>
     <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JAVASCRIPT">JAVA-SCRIPT</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-The key features of this project include.
-
-- **Show all Experts**
-- **Reserve an Expert**
-- **Show my Reservation**
-- **Add an Expert**
-- **Delete an Expert**
-- **Add a Specialization**
+- **Discover Events**
+- **Location Insights**
+- **Event Creation**
+- **User Authentication**
+- **Weather Updates**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,18 +88,24 @@ The key features of this project include.
 
 > - To get a local copy up and running, follow these steps.
 
-### Prerequisites
+## Prerequisites
 
-Before you begin, make sure you have the following installed on your machine:
+Before diving into the project, ensure your development environment is set up by installing the following tools:
 
-- [x] A code editor (like VSCode, Sublime, Atom, etc.): You can download VSCode [here](https://code.visualstudio.com/download), Sublime [here](https://www.sublimetext.com/3), and Atom [here](https://atom.io/).
-- [x] Git: You can download Git [here](https://git-scm.com/downloads).
-- [x] Node.js: You can download Node.js [here](https://nodejs.org/en/download/).
+- **Code Editor**: A robust code editor is essential for efficient coding. Popular options include:
 
-> - Version Requirements:
+  - [Visual Studio Code (VSCode)](https://code.visualstudio.com/download) - Highly recommended for its extensive feature set and plugin ecosystem.
+  - [Sublime Text](https://www.sublimetext.com/3) - Known for its speed and efficiency.
+  - [Atom](https://atom.io/) - A customizable editor with a friendly user interface.
+
+- **Git**: An indispensable tool for version control and collaboration. Download Git from [here](https://git-scm.com/downloads).
+
+- **Node.js**: The runtime environment required to run JavaScript code outside a web browser, crucial for developing server-side applications and running build tools. Download Node.js from [here](https://nodejs.org/en/download/).
+
+### Version Requirements
 
 ```
-  react > 16.3.2
+  react > 18.3.1
 ```
 
 ### Setup
@@ -104,13 +118,13 @@ Before you begin, make sure you have the following installed on your machine:
 4. Clone the repository by running the following command:
 
 ```sh
-git clone https://github.com/anita00001/fix-mate-frontend.git
+git clone git@github.com:AnsarIbrahim/bookusnow-frontend.git
 ```
 
 5. Navigate into the cloned repository:
 
 ```sh
-cd fix-mate-frontend
+cd bookusnow-frontend
 ```
 
 ### Installation
@@ -165,37 +179,18 @@ npm start
 
 ## 👥 Authors <a name="authors"></a>
 
-The collaborators of this project.
-
-👨‍🚀 **Anita Sharma**
-
-> - GitHub: [@anita00001](https://github.com/anita00001)
-> - LinkedIn: [anitaa-sharmaa](https://www.linkedin.com/in/anitaa-sharmaa/)
-> - Twitter: [@anitaa_sharmaa](https://twitter.com/anitaa_sharmaa)
-
 👤 **Ansar Ibrahim**
 
 - [GitHub](https://github.com/AnsarIbrahim)
 - [LinkedIn](https://linkedin.com/in/ansar-ibrahim/)
 - [Twitter](https://twitter.com/ansaradheeb)
 
-👤 **MoFuhidy**
-
-- GitHub: [@Mofuhidy](https://github.com/Mofuhidy)
-- LinkedIn: [@Mofuhidy](https://www.linkedin.com/in/mo-fuhidy/)
-
-👤 **Theodore Asimeng-Osei**
-
-- GitHub: [@githubhandle](https://github.com/Theodoraldo)
-- Twitter: [@twitterhandle](https://twitter.com/AsimengOse33947)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/theodoreasimeng/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Delete Specializations**
-- [ ] **Add Admin Role**
+- [ ] **Scheduling Assistance**
+- [ ] **Delete Admin Role**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -215,7 +210,7 @@ The collaborators of this project.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> - We would like to thank [Microverseinc](https://github.com/microverseinc) for [Readme-template](https://github.com/microverseinc/readme-template), our code reviewer and external evaluator. We would extend our sincere gratitude to [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for provinding the original design.
+> - I would like to thank [NovaNectar Services Pvt. Ltd.](https://www.novanectar.co.in/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

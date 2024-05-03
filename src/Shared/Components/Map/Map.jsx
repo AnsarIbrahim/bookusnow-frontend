@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import mapboxgl from 'mapbox-gl';
 
 import './Map.css';
-import { APIKey } from '../../../redux/BaseUrl';
+import { APIKey } from '../../../redux/baseUrl';
 
 mapboxgl.accessToken = APIKey;
 

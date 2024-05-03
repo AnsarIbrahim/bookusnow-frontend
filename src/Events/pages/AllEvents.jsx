@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 import { fetchEvents } from '../../redux/events/eventsSlice';
-import { serverUrl } from '../../redux/BaseUrl';
+import { serverUrl } from '../../redux/baseUrl';
 import EventMapModal from '../components/EventMapModal';
 import EventCard from '../components/EventCard';
 import fetchCoordinates from '../components/FetchMap';

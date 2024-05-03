@@ -1,4 +1,4 @@
-import { APIKey } from '../../redux/BaseUrl';
+import { APIKey } from '../../redux/baseUrl';
 
 const fetchCoordinates = async (cityName) => {
   const response = await fetch(
