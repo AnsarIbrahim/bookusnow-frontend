@@ -1,6 +1,5 @@
-const baseUrl = 'http://localhost:5000/';
-const serverUrl = 'http://localhost:5000';
-const APIKey =
-  'pk.eyJ1IjoiYW5zYXJpYnJhaGltIiwiYSI6ImNsdmtxY2d6bjIxdHYyaXBlNTFwN3RhamoifQ.-mLekTewX1jETujlLagkYg';
+const baseUrl = process.env.REACT_APP_BASE_URL;
+const serverUrl = process.env.REACT_APP_SERVER_URL;
+const APIKey = process.env.REACT_APP_MAP_KEY;
 
 export { baseUrl, APIKey, serverUrl };

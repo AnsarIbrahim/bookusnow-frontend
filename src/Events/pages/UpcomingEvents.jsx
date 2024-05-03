@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRightLong, FaLocationDot } from 'react-icons/fa6';
 
 import { fetchUpcomeEvents } from '../../redux/events/upcomeEventSlice';
-import { serverUrl } from '../../redux/BaseUrl';
+import { serverUrl } from '../../redux/baseUrl';
 import fetchCoordinates from '../components/FetchMap';
 import EventMapModal from '../components/EventMapModal';
 

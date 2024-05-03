@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-import { baseUrl } from '../BaseUrl';
+import { baseUrl } from '../baseUrl';
 
 export const fetchUpcomeEvents = createAsyncThunk(
   'events/fetchUpcomeEvents',
