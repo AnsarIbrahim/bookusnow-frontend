@@ -42,7 +42,7 @@
 
 ## 📹 Presentation Overview Video <a name="the-video"></a>
 
-- [Project Showcase]()
+- [Project Showcase](https://youtu.be/kWuiJBWqA1w)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
