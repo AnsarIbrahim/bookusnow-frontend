@@ -13,6 +13,7 @@ const EventCard = ({ event, handleCityClick, serverBaseUrl }) => (
     {event.image ? (
       <img
         src={`data:image/jpeg;base64,${event.image}`}
+        className="w-56 h-80 object-cover rounded-xl shadow-lg"
         alt={event.eventName}
       />
     ) : event.imgUrl ? (

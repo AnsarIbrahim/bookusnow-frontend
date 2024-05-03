@@ -5,6 +5,7 @@ import loginSlice from './login/loginSlice';
 import usersSlice from './userList/usersSlice';
 import eventsSlice from './events/eventsSlice';
 import upcomeEventSlice from './events/upcomeEventSlice';
+import createEventSlice from './events/createEventSlice';
 
 const store = configureStore({
   reducer: {
@@ -13,7 +14,12 @@ const store = configureStore({
     users: usersSlice,
     events: eventsSlice,
     upcomingEventsData: upcomeEventSlice,
+    createEvent: createEventSlice,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export default store;

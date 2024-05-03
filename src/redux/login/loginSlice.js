@@ -5,27 +5,21 @@ import { baseUrl } from '../BaseUrl';
 
 export const login = createAsyncThunk(
   'login',
-  async ({ email, password }, { dispatch }) => {
+  async ({ email, password }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
         `${baseUrl}api/v1/users/login`,
-        {
-          email,
-          password,
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
+        { email, password },
+        { headers: { 'Content-Type': 'application/json' } }
       );
 
       const { userId, email: userEmail, token } = response.data;
-      dispatch(setUser({ userId, email: userEmail, token }));
+      localStorage.setItem('token', token);
+      localStorage.setItem('userId', userId);
 
-      return response.data;
+      return { userId, email: userEmail, token };
     } catch (error) {
-      return error.response.data;
+      return rejectWithValue(error.response.data);
     }
   }
 );
@@ -33,8 +27,8 @@ export const login = createAsyncThunk(
 const loginSlice = createSlice({
   name: 'login',
   initialState: {
-    userId: null,
-    token: null,
+    userId: localStorage.getItem('userId') || null,
+    token: localStorage.getItem('token') || null,
     status: 'idle',
     error: null,
     message: null,
@@ -45,8 +39,13 @@ const loginSlice = createSlice({
       state.token = action.payload.token;
     },
     logout: (state) => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('userId');
       state.userId = null;
       state.token = null;
+    },
+    resetMessage: (state) => {
+      state.message = null;
     },
   },
   extraReducers: (builder) => {
@@ -57,14 +56,14 @@ const loginSlice = createSlice({
       })
       .addCase(login.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.message = 'Login Success';
         state.userId = action.payload.userId;
         state.token = action.payload.token;
       })
       .addCase(login.rejected, (state, action) => {
         state.status = 'idle';
-        state.error = action.error.message;
-        state.message = 'Login Failed';
+        state.error = action.payload
+          ? action.payload.message
+          : action.error.message;
       });
   },
 });

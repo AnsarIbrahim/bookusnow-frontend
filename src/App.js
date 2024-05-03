@@ -1,3 +1,4 @@
+import React from 'react';
 import PageRoute from './Route/PageRoute';
 
 const App = () => {

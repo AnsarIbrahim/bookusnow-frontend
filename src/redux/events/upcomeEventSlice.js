@@ -7,7 +7,6 @@ export const fetchUpcomeEvents = createAsyncThunk(
   'events/fetchUpcomeEvents',
   async () => {
     const response = await axios.get(`${baseUrl}api/v1/events/upcomeEvent`);
-    console.log(response.data);
     return response.data;
   }
 );
