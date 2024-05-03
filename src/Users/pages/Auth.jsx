@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import Header from '../../Pages/Header/Header';
 import UsersList from '../components/Users/UsersList';
 import LoginForm from '../components/Form/LoginForm';
 import SignupForm from '../components/Form/SignupForm';
@@ -27,7 +26,6 @@ const Auth = () => {
 
   return (
     <>
-      <Header />
       <div className="bg-zinc-50 h-screen">
         <motion.div
           className="flex items-center justify-center pt-32 pb-5 flex-col"

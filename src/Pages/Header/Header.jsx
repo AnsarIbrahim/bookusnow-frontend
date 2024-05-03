@@ -53,7 +53,9 @@ const Header = () => {
           <ul className="flex items-center justify-center md:gap-5 gap-7 text-xs md:text-sm text-center font-inter whitespace-nowrap pl-44 md:pl-0">
             {headerLinks.map((link, index) => (
               <li key={index} className="hover:text-blue-500">
-                <a href={link.url}>{link.name}</a>
+                <a href={link.url} className="font-inter">
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>

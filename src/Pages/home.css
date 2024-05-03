@@ -1,0 +1,10 @@
+.events-container {
+  position: absolute;
+  top: 70%;
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    top: 80%;
+  }
+}

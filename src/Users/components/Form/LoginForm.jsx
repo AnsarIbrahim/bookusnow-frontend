@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { login } from '../../../redux/login/loginSlice';
 import { selectMessage } from '../../../redux/login/loginSlice';
 import LoadingSpinner from '../../../Shared/Components/LoadingSpinner/LoadingSpinner';
+import Popup from '../../../components/Popup';
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -13,6 +14,18 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [popup, setPopup] = useState({ show: false, message: '', type: '' });
+
+  useEffect(() => {
+    if (message) {
+      setIsLoading(false);
+      if (message === 'Login successful') {
+        setPopup({ show: true, message: message, type: 'success' });
+      } else {
+        setPopup({ show: true, message: message, type: 'fail' });
+      }
+    }
+  }, [message, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -55,8 +68,8 @@ const LoginForm = () => {
         >
           Login
         </button>
-        {message && <p className="text-red-500">{message}</p>}
       </form>
+      {popup.show && <Popup message={popup.message} type={popup.type} />}
     </>
   );
 };
